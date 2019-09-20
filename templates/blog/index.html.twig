@@ -1,0 +1,24 @@
+{% extends 'layout.html.twig' %}
+
+{% block title %}Kingdom of horror!{% endblock %}
+
+{% block body %}
+
+        {% for article in article %}
+        <div class="post-preview">
+          <a href="{{ path('article', {id : article.id}) }}">
+            <h2 class="post-title">
+           {{ article.title }}
+            </h2>
+            <h3 class="post-subtitle">
+             {{ article.content }}
+            </h3>
+          </a>
+          <p class="post-meta">Posted by
+            <a href="#">Freddy</a>
+            on {{ article.publishedAt|date('d/m/y') }}</p>
+        </div>
+        <hr>
+    {% endfor %}
+
+{% endblock %}

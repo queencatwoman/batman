@@ -1,0 +1,12 @@
+{% extends 'layout.html.twig' %}
+
+{% block head1 %}
+{% block img %}('{{ article.picture }}'){% endblock %}
+{{ article.title }}
+
+{% endblock %}
+
+{% block body %}
+ <p>{{ article.content }}</p>
+{% endblock %}
+
